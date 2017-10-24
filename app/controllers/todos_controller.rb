@@ -44,6 +44,10 @@ class TodosController < ApplicationController
     @todo.save
     redirect_to todos_path
   end
+
+  def list
+    @todos = Todo.all
+  end
 end
 
 private
