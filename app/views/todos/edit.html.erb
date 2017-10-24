@@ -1,13 +1,1 @@
-<h1> Ingresar nuevo ToDo </h1>
-
-<%= form_with model: @todo, local: true do |t| %>
-  <div class="well">
-    <%= t.label :description, "ToDo" %>
-    <%= t.text_field :description %>
-
-    <%= t.label :completed, "Listo" %>
-    <%= t.check_box :completed %>
-
-    <%= t.submit "Guardar" %>
-  </div>
-<% end %>
+<%= render 'form' %>
