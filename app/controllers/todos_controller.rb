@@ -12,6 +12,15 @@ class TodosController < ApplicationController
     @todo.save
     redirect_to todos_path
   end
+
+  def show
+    @todo = Todo.find(params[:id])
+    if @todo.completed
+      @status = 'Completado'
+    else
+      @status = 'No completado'
+    end
+  end
 end
 
 private
