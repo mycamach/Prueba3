@@ -37,6 +37,13 @@ class TodosController < ApplicationController
     @todo.destroy
     redirect_to todos_path
   end
+
+  def complete
+    @todo = Todo.find(params[:id])
+    @todo.completed = true
+    @todo.save
+    redirect_to todos_path
+  end
 end
 
 private
