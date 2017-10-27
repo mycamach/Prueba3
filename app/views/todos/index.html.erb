@@ -1,11 +1,11 @@
-<h1> ToDo List </h1>
+<h1> Lista de ToDos </h1>
 
 <% @todos.each do |t| %>
   <div class="well">
-    <%= t.description %>
-    <h3> PENDIENTE(SHOW)<%# link_to 'Mostrar ToDo', todo %> </h3>
-    <h3> PENDIENTE (EDIT) <%# link_to 'Editar ToDo', todo %> </h3>
-    <h3> PENDIENTE (BORRAR) <%# link_to "Borrar", post, method: :delete %> </h3>
+    <h2> <%= t.description %> </h2>
+    <h3> <%= link_to 'Mostrar ToDo', todo_path(t.id) %> </h3>
+    <h3> <%= link_to 'Editar ToDo', edit_todo_path(t.id) %> </h3>
+    <h3> <%= link_to "Borrar ToDo", t, method: :delete %> </h3>
   </div>
 <% end %>
 
