@@ -1,7 +1,7 @@
 <h1> Lista de ToDos </h1>
 
 <% @todos.each do |t| %>
-  <div class="well">
+  <div class="well well-lg">
     <h2> <%= t.description %> </h2>
     <%= link_to 'Mostrar ToDo', todo_path(t.id), class:'btn btn-primary' %>
     <%= link_to 'Editar ToDo', edit_todo_path(t.id), class:'btn btn-success' %>

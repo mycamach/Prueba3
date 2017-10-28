@@ -1,7 +1,7 @@
 <h1> Ingresar nuevo ToDo </h1>
 
 <%= form_with model: @todo, local: true do |t| %>
-  <div class="well">
+  <div class="well well-lg">
     <%= t.label :description, "ToDo" %>
     <%= t.text_field :description %>
 
