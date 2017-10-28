@@ -3,9 +3,9 @@
 <% @todos.each do |t| %>
   <div class="well">
     <h2> <%= t.description %> </h2>
-    <button> <%= link_to 'Mostrar ToDo', todo_path(t.id), class:'btn btn-primary' %> </button>
-    <button> <%= link_to 'Editar ToDo', edit_todo_path(t.id), class:'btn btn-success' %> </button>
-    <button> <%= link_to "Borrar ToDo", t, method: :delete, data: {confirm: '¿Borrar ToDo?'}, class:'btn btn-danger' %> </button>
+    <%= link_to 'Mostrar ToDo', todo_path(t.id), class:'btn btn-primary' %>
+    <%= link_to 'Editar ToDo', edit_todo_path(t.id), class:'btn btn-success' %>
+    <%= link_to "Borrar ToDo", t, method: :delete, data: {confirm: '¿Borrar ToDo?'}, class:'btn btn-danger' %>
   </div>
 <% end %>
 
